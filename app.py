@@ -398,7 +398,7 @@ elif page == "Conclusions":
             ("Punjab is not the only culprit", "Ablation study shows Punjab features explain only ~6% of predictable variance. Local Delhi sources and Haryana account for the rest."),
             ("2-day advance warning is possible", "Classification models achieve 89.9% accuracy, 87.8% recall — enough to power a real early-warning system."),
         ]
-        for title, body in findings:
+        for emoji, title, body in findings:
             st.markdown(f'<div class="insight-box">{emoji} <b>{title}</b><br>{body}</div>', unsafe_allow_html=True)
 
     with col2:
@@ -410,7 +410,7 @@ elif page == "Conclusions":
             ("Address local sources too", "Punjab explains only 6% of variance. 94% comes from other factors — local Delhi emissions and Haryana must not be ignored."),
             ("Re-evaluate current regulations", "Correlation increased in Era 2 despite policies. Current approach needs review."),
         ]
-        for title, body in recs:
+        for emoji, title, body in recs:
             st.markdown(f'<div class="warn-box">{emoji} <b>{title}</b><br>{body}</div>', unsafe_allow_html=True)
 
     st.markdown("---")
