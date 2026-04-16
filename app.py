@@ -185,7 +185,7 @@ elif page == "Correlation Analysis":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 3 — COVID EXPERIMENT
 # ═══════════════════════════════════════════════════════════════════════════════
-elif page == "🦠 COVID Experiment":
+elif page == "COVID Experiment":
     st.markdown('<p class="section-head">COVID-19 Lockdown as a Natural Experiment</p>', unsafe_allow_html=True)
     st.write("The March–June 2020 lockdown eliminated most local traffic and industrial activity, creating a rare controlled condition to test whether cross-state pollution transport is real.")
 
@@ -235,7 +235,7 @@ elif page == "🦠 COVID Experiment":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 4 — ML MODELS & ABLATION
 # ═══════════════════════════════════════════════════════════════════════════════
-elif page == "🤖 ML Models & Ablation":
+elif page == "ML Models & Ablation":
     st.markdown('<p class="section-head">Machine Learning Models — Performance Comparison</p>', unsafe_allow_html=True)
     st.write("Three regression models trained on a 70–30 time-series split. Target: Delhi daily PM2.5. Features: Punjab/Haryana lag features + time-based variables.")
 
@@ -314,7 +314,7 @@ elif page == "🤖 ML Models & Ablation":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 5 — SEVERE DAY PREDICTOR
 # ═══════════════════════════════════════════════════════════════════════════════
-elif page == "⚠️ Severe Day Predictor":
+elif page == "Severe Day Predictor":
     st.markdown('<p class="section-head">Severe AQI Day Predictor — Early Warning Demo</p>', unsafe_allow_html=True)
     st.write("Our classification models predict whether tomorrow will be a severe AQI day (PM2.5 > 150 μg/m³). Adjust today's readings to see the risk.")
 
@@ -385,7 +385,7 @@ elif page == "⚠️ Severe Day Predictor":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 6 — CONCLUSIONS
 # ═══════════════════════════════════════════════════════════════════════════════
-elif page == "📋 Conclusions":
+elif page == "Conclusions":
     st.markdown('<p class="section-head">Final Conclusions & Policy Recommendations</p>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
