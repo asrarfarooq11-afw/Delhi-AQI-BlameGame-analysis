@@ -385,7 +385,7 @@ elif page == "Severe Day Predictor":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 6 — CONCLUSIONS
 # ═══════════════════════════════════════════════════════════════════════════════
- elif page == "Conclusions":
+elif page == "Conclusions":
     st.markdown('<p class="section-head">Final Conclusions & Policy Recommendations</p>', unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
