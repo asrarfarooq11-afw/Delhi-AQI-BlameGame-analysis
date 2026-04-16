@@ -7,7 +7,7 @@ import seaborn as sns
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Delhi AQI Analysis",
+    page_title="Delhi AQI Analysis(Blame_game Analysis",
     page_icon="🌫️",
     layout="wide",
 )
@@ -151,8 +151,8 @@ elif page == "Correlation Analysis":
         })
         st.dataframe(df_corr, use_container_width=True, hide_index=True)
 
-        st.markdown('<div class="insight-box">✅ All correlations are statistically significant (p < 0.0001).</div>', unsafe_allow_html=True)
-        st.markdown('<div class="warn-box">⚠️ Correlations INCREASED in Era 2, suggesting pollution transport is getting stronger — not weaker — despite regulations.</div>', unsafe_allow_html=True)
+        st.markdown('<div class="insight-box"> All correlations are statistically significant (p < 0.0001).</div>', unsafe_allow_html=True)
+        st.markdown('<div class="warn-box"> Correlations INCREASED in Era 2, suggesting pollution transport is getting stronger — not weaker — despite regulations.</div>', unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown('<p class="section-head">Stubble Season Analysis (Oct 15 – Nov 30)</p>', unsafe_allow_html=True)
@@ -392,11 +392,11 @@ elif page == "Conclusions":
     with col1:
         st.markdown("#### What the data says")
         findings = [
-            ("✅", "Punjab DOES contribute", "r = 0.716 with Delhi (2-day lag), p < 0.0001. Statistically undeniable."),
-            ("✅", "Haryana contributes MORE", "r = 0.855 with Delhi (1-day lag). Haryana is the stronger driver — often ignored in the media narrative."),
-            ("⚠️", "Regulations haven't reduced it", "Punjab's correlation INCREASED by 29.5% from Era 1 to Era 2, despite stricter stubble-burning rules."),
-            ("⚠️", "Punjab is not the only culprit", "Ablation study shows Punjab features explain only ~6% of predictable variance. Local Delhi sources and Haryana account for the rest."),
-            ("✅", "2-day advance warning is possible", "Classification models achieve 89.9% accuracy, 87.8% recall — enough to power a real early-warning system."),
+            ("Punjab DOES contribute", "r = 0.716 with Delhi (2-day lag), p < 0.0001. Statistically undeniable."),
+            ("Haryana contributes MORE", "r = 0.855 with Delhi (1-day lag). Haryana is the stronger driver — often ignored in the media narrative."),
+            ("Regulations haven't reduced it", "Punjab's correlation INCREASED by 29.5% from Era 1 to Era 2, despite stricter stubble-burning rules."),
+            ("Punjab is not the only culprit", "Ablation study shows Punjab features explain only ~6% of predictable variance. Local Delhi sources and Haryana account for the rest."),
+            ("2-day advance warning is possible", "Classification models achieve 89.9% accuracy, 87.8% recall — enough to power a real early-warning system."),
         ]
         for emoji, title, body in findings:
             st.markdown(f'<div class="insight-box">{emoji} <b>{title}</b><br>{body}</div>', unsafe_allow_html=True)
@@ -404,11 +404,11 @@ elif page == "Conclusions":
     with col2:
         st.markdown("#### Policy recommendations")
         recs = [
-            ("🎯", "Regional cooperation", "Work with Punjab and Haryana jointly. Targeting only Punjab misses the stronger Haryana signal."),
-            ("🎯", "Target stubble season", "Focus interventions Oct 15 – Nov 30. Delhi PM2.5 is 76.9% higher during this window."),
-            ("🎯", "Deploy the early-warning system", "Punjab's 2-day lag gives 2 days of advance notice. Haryana's 1-day lag allows 1-day preparation. Both are actionable."),
-            ("🎯", "Address local sources too", "Punjab explains only 6% of variance. 94% comes from other factors — local Delhi emissions and Haryana must not be ignored."),
-            ("🎯", "Re-evaluate current regulations", "Correlation increased in Era 2 despite policies. Current approach needs review."),
+            ("Regional cooperation", "Work with Punjab and Haryana jointly. Targeting only Punjab misses the stronger Haryana signal."),
+            ("Target stubble season", "Focus interventions Oct 15 – Nov 30. Delhi PM2.5 is 76.9% higher during this window."),
+            ("Deploy the early-warning system", "Punjab's 2-day lag gives 2 days of advance notice. Haryana's 1-day lag allows 1-day preparation. Both are actionable."),
+            ("Address local sources too", "Punjab explains only 6% of variance. 94% comes from other factors — local Delhi emissions and Haryana must not be ignored."),
+            ("Re-evaluate current regulations", "Correlation increased in Era 2 despite policies. Current approach needs review."),
         ]
         for emoji, title, body in recs:
             st.markdown(f'<div class="warn-box">{emoji} <b>{title}</b><br>{body}</div>', unsafe_allow_html=True)
