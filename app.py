@@ -410,7 +410,7 @@ elif page == "Conclusions":
             ("Address local sources too", "Punjab explains only 6% of variance. 94% comes from other factors — local Delhi emissions and Haryana must not be ignored."),
             ("Re-evaluate current regulations", "Correlation increased in Era 2 despite policies. Current approach needs review."),
         ]
-        for emoji, title, body in recs:
+        for title, body in recs:
             st.markdown(f'<div class="warn-box">{emoji} <b>{title}</b><br>{body}</div>', unsafe_allow_html=True)
 
     st.markdown("---")
