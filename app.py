@@ -7,7 +7,7 @@ import seaborn as sns
 
 # ── Page config ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Delhi AQI Analysis | Thapar University",
+    page_title="Delhi AQI Analysis",
     page_icon="🌫️",
     layout="wide",
 )
@@ -39,12 +39,12 @@ with st.sidebar:
     st.markdown("**Thapar University**")
     st.markdown("---")
     page = st.radio("Navigate", [
-        "🏠 Overview",
-        "📊 Correlation Analysis",
-        "🦠 COVID Experiment",
-        "🤖 ML Models & Ablation",
-        "⚠️ Severe Day Predictor",
-        "📋 Conclusions",
+        "Overview",
+        "Correlation Analysis",
+        "COVID Experiment",
+        "ML Models & Ablation",
+        "Severe Day Predictor",
+        "Conclusions",
     ])
     st.markdown("---")
     st.markdown("""
@@ -60,7 +60,7 @@ with st.sidebar:
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 1 — OVERVIEW
 # ═══════════════════════════════════════════════════════════════════════════════
-if page == "🏠 Overview":
+if page == "Overview":
     st.markdown('<p class="main-title">Delhi AQI Regional Contribution Analysis</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-title">A statistical & machine-learning study identifying how pollution from Haryana and Punjab drives Delhi\'s air quality crisis.</p>', unsafe_allow_html=True)
 
@@ -112,7 +112,7 @@ if page == "🏠 Overview":
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE 2 — CORRELATION ANALYSIS
 # ═══════════════════════════════════════════════════════════════════════════════
-elif page == "📊 Correlation Analysis":
+elif page == "Correlation Analysis":
     st.markdown('<p class="section-head">Dual-Era Correlation Analysis</p>', unsafe_allow_html=True)
     st.write("Comparing how strongly Punjab and Haryana PM2.5 (with lag) correlates with Delhi's PM2.5 across two time eras.")
 
