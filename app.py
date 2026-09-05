@@ -305,14 +305,14 @@ elif page == "ML":
     st.plotly_chart(fig, use_container_width=True)
 
     m1, m2, m3 = st.columns(3)
-    for col, row in zip([m1, m2, m3], models.itertuples()):
+    for col, (_, row) in zip([m1, m2, m3], models.iterrows()):
         with col:
             st.markdown(f"""
             <div class="card">
-            <h4>{row.Model}</h4>
-            <div class="big">{row._2:.3f}</div>
+            <h4>{row["Model"]}</h4>
+            <div class="big">{row["R²"]:.3f}</div>
             <span class="muted">Test R²</span><br>
-            RMSE: <b>{row.RMSE:.2f}</b>
+            RMSE: <b>{row["RMSE"]:.2f}</b>
             </div>
             """, unsafe_allow_html=True)
 
